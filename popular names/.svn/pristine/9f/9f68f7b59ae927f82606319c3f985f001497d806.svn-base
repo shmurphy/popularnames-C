@@ -1,0 +1,41 @@
+/*
+ * hw3.c
+ *
+ *  Created on: Apr 20, 2015
+ *      Author: Shannon Murphy
+ */
+
+#include <stdio.h>
+
+int main(void) {
+	FILE *infile = fopen("./names//yob1920.txt", "rb");
+	char c;
+	char names[100];
+	char line[100][100];
+	int count = 0;
+
+//	int i;
+//	int j;
+//	for (i = 0; i < 100; i++) {
+//	    for (j = 0; j < 100; j++) {
+////	        line[i][j] = 's';
+//	    	fscanf( infile, "%c", &c );
+//	    	printf("%c", c);
+//			line[i][j]=c;
+//
+//		}
+//	}
+	int i = 0, j = 0;
+	while (fgets(names, sizeof(names), infile) && count < 100) {
+//	        printf("%d: %s", count, names);
+//	        line[0][0] = names[0];
+//	    	printf("%c", line[0][1]);
+
+	        count++;
+	    }
+		        printf("%s", names);
+
+	 fclose(infile);
+
+	return 0;
+}

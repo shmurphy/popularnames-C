@@ -1,0 +1,66 @@
+/*
+ * hw3.c
+ *
+ *  Created on: Apr 20, 2015
+ *      Author: Shannon Murphy
+ */
+
+#include <stdio.h>
+#include <string.h>
+
+
+int main(void) {
+	FILE *infile = fopen("./names//yob1920.txt", "rb");
+//	int count = 0;
+	char item[100];
+//	char name;
+	char names[100][30];
+	int i = 0;
+	int j =0;
+
+	   int day, year;
+	   char name[20], month[20], dtm[100];
+
+//
+//	while((fscanf(infile,"%s",item) == 1)) {
+//		if (i < 100) {
+//			printf("\n%d: %s", i, item);
+//			i++;
+//		}
+//		j++;
+//	}
+
+
+
+    char *str = "abcd,efgh,ijk,xyz";
+    char buf[4];
+    int n = 100;
+    while (sscanf(str, "%[^,]%n", &buf, &n)) {
+            printf("%s\n", buf);
+            str += n;
+            if (*str == '\0')
+                    break;
+            ++str;
+    }
+
+
+
+
+//	int x, y;
+//	for(x=0; x < 100; x++)      {
+//		for(y=0; y < 30; y++)      {
+////		printf("\n%d, %d",x,y);
+//			if((fscanf(infile,"%c",&names[x][y]) == 1)) {
+////		fscanf(infile,"%c", &names[x][y]);
+//				printf("%c", names[x][y]);
+//			}
+//		}
+//	}
+
+
+
+
+	fclose(infile);
+
+	return 0;
+}
